@@ -1,0 +1,14 @@
+name: common
+root: ~/
+
+windows:
+  - irssi:
+    - start-irssi.sh
+  - mutt:
+    - mutt
+  - ranger:
+    - ranger
+  - task:
+    - task
+  - ncmpcpp:
+    - ncmpcpp
