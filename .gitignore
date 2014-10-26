@@ -2,3 +2,4 @@ setup
 
 # TMUX
 home/.tmux/plugins/
+home/.tmuxinator/
