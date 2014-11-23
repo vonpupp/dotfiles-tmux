@@ -1,0 +1,26 @@
+session_name: edit
+windows:
+- window_name: mutt
+  layout: main-vertical
+  focus: true
+  shell_command_before:
+    - cd .
+  panes:
+    - shell_command:
+      - mutt
+- window_name: irssi
+  layout: main-vertical
+  shell_command_before:
+    - cd .
+  panes:
+    - shell_command:
+      - start-irssi.sh
+- window_name: tasks
+  layout: main-horizontal
+  shell_command_before:
+    - cd .
+  panes:
+    - shell_command:
+      - ncmpcpp
+    - shell_command:
+      - task

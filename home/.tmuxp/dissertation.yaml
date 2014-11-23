@@ -1,0 +1,22 @@
+session_name: dissertation
+windows:
+- window_name: edit
+  layout: main-vertical
+  focus: true
+  shell_command_before:
+    - cd ~/Dropbox/MAC5910-Albert/dissertation/src
+  panes:
+    - v *.tex
+    - shell_command:
+      - cd $HOME/research/vagrant-pycloudsim/data-analysis
+      - ls -la
+    - shell_command:
+      - cd ../scripts
+      - ls -la
+- window_name: ssh
+  layout: main-vertical
+  shell_command_before:
+    - cd ~/Dropbox/MAC5910-Albert/dissertation/src
+  panes:
+    - echo "ssh imeproxy"
+    - echo "ssh upcs01"
