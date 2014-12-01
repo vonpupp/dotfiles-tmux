@@ -6,7 +6,9 @@ windows:
   shell_command_before:
     - cd ~/Dropbox/MAC5910-Albert/dissertation/src
   panes:
-    - v *.tex
+    - shell_command:
+      - v *.tex
+      focus: true
     - shell_command:
       - cd $HOME/research/vagrant-pycloudsim/data-analysis
       - ls -la
