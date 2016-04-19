@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 DIRNAME=`dirname $0`
 
 source $DIRNAME/.vars
@@ -6,7 +6,8 @@ source ~/.homesick/repos/homeshick/homeshick.sh
 homeshick link $REPO_NAME
 
 # PIP (USER)
-pip install --user git+git://github.com/tony/tmuxp
+source ~/.venv/bin2/bin/activate
+pip install git+git://github.com/tony/tmuxp
 
 # TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
