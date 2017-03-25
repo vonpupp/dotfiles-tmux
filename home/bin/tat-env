@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BASENAME="$(basename "$PWD")"
+DIRNAME="$(dirname "$PWD")"
+ENVFILE="$DIRNAME/$BASENAME/.env"
+SESSION_NAME="$(basename "$PWD" | tr . -)"
+
+if [ -f "$ENVFILE" ]; then
+    source $ENVFILE
+    if [ ! -z ${TMUX_SESSION_NAME} ]; then
+        SESSION_NAME=$TMUX_SESSION_NAME
+    fi
+fi
+
+tmux new-session -As "$SESSION_NAME"
